@@ -1,87 +1,62 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pagina_principal</title>
+    <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
 	<header>
 		<nav>
 			<ul>
-				<li><a href="#">Inicio</a></li>
-				<li><a href="#">Iniciar sesion</a></li>
-				<li><a href="#">Registarse</a></li>
 				<li style="float:right"><a href="#">Desloggearse</a></li>
+                <li id="imprimir" type="button" >Imprimir en PDF</li>
 			</ul>
 		</nav>
 	</header>
 	<main>
-		<section>
-			<h1>Mi Hoja de Vida</h1>
-			<button onclick="activarEdicion()">Editar</button>
-			<form id="formulario" style="display:none">
-				<label for="nombreCompleto">Nombre completo:</label>
-				<input type="text" id="nombreCompleto" name="nombreCompleto"><br>
+		<div class="container">
+			<section class="form-section">
+				<form id="formulario" class="formulario">
+					<label for="nombreCompleto">Nombre completo:</label>
+					<input type="text" id="nombreCompleto" name="nombreCompleto"><br>
 
-				<label for="numero">Número:</label>
-				<input type="tel" id="numero" name="numero"><br>
+					<label for="cargo">Cargo:</label>
+					<input type="text" id="cargo" name="cargo"><br>
 
-				<label for="correo">Correo electrónico:</label>
-				<input type="email" id="correo" name="correo"><br>
+					<label for="descripcion">Descripción personal:</label>
+					<textarea id="descripcion" name="descripcion"></textarea><br>
 
-				<label for="experiencia">Experiencia laboral:</label>
-				<textarea id="experiencia" name="experiencia"></textarea><br>
+					<label for="numero">Número:</label>
+					<input type="tel" id="numero" name="numero"><br>
 
-				<label for="descripcion">Descripción personal:</label>
-				<textarea id="descripcion" name="descripcion"></textarea><br>
+					<label for="web">Página Web:</label>
+					<input type="url" id="web" name="web"><br>
 
-				<input type="submit" value="Guardar">
-			</form>
-			<div id="hojaVida">
-				<h2 id="nombreCompletoTitulo">María Fernanda García Pérez</h2>
-				<p id="numeroParrafo">(33) 1234-5678</p>
-				<p id="correoParrafo">maria.garcia@example.com</p>
-				<h3>Experiencia laboral</h3>
-				<ul id="experienciaLista"><li>Asistente Administrativo en ABC S.A. de C.V., de junio de 2018 a diciembre de 2021. Responsable de llevar a cabo diversas tareas administrativas, tales como la gestión de archivos, la organización de eventos y la atención de llamadas y correos electrónicos.</li>
-                    <li>Auxiliar Contable en XYZ S.C., de enero de 2017 a mayo de 2018. Encargada de realizar registros contables, revisar facturas y estados financieros, y apoyar en la elaboración de la nómina.</li></ul>
-				<h3>Descripción personal</h3>
-				<p id="descripcionParrafo">Soy una persona comprometida y responsable, con habilidades de organización y trabajo en equipo. Me gusta aprender cosas nuevas y asumir nuevos desafíos para seguir creciendo profesionalmente.</p>
-			</div>
-		</section>
+					<label for="experiencia">Experiencia laboral:</label>
+					<textarea id="experiencia" name="experiencia"></textarea><br>
+
+
+					<input type="submit" value="Actualizar" class="actualizar">
+					<input type="reset" value="Cancelar" class="cancelar">
+				</form>
+			</section>
+			<section id="hojaVida" class="hoja-vida">
+				<div class="container-hoja-vida">
+					<h2 id="nombreCompletoCV"></h2>
+					<h3 id="cargoCV"></h3>
+					<p id="numeroCV"></p>
+					<p id="correoCV">example@mail.com</p>
+					<h3>Experiencia laboral</h3>
+					<ul id="experienciaCV"><li></li>
+						</ul>
+					<h3>Descripción personal</h3>
+					<p id="descripcionCV"></p>
+				</div>
+			</section>
+		</div>
 	</main>
-	<script>
-		function activarEdicion() {
-			document.getElementById("formulario").style.display = "block";
-		}
-
-		document.getElementById("formulario").addEventListener("submit", function(event) {
-			event.preventDefault();
-			var nombreCompleto = document.getElementById("nombreCompleto").value;
-			var numero = document.getElementById("numero").value;
-			var correo = document.getElementById("correo").value;
-			var experiencia = document.getElementById("experiencia").value;
-			var descripcion = document.getElementById("descripcion").value;
-
-			document.getElementById("nombreCompletoTitulo").innerText = nombreCompleto;
-			document.getElementById("numeroParrafo").innerText = numero;
-			document.getElementById("correoParrafo").innerText = correo;
-
-			var experienciaItems = experiencia.split("\n");
-			var experienciaLista = document.getElementById("experienciaLista");
-			experienciaLista.innerHTML = "";
-			for (var i = 0; i < experienciaItems.length; i++) {
-				var experienciaItem = document.createElement("li");
-				experienciaItem.innerText = experienciaItems[i];
-				experienciaLista.appendChild(experienciaItem);
-			}
-
-			document.getElementById("descripcionParrafo").innerText = descripcion;
-
-			document.getElementById("formulario").style.display = "none";
-		});
-	</script>
+	<script src="./scripts/script.js"></script>
+	<script src="./scripts/eventsInputs.js"></script>
 </body>
 </html>
-
