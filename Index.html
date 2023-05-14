@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina_principal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header>
+		<nav>
+			<ul>
+				<li style="float:right"><a href="#">Desloggearse</a></li>
+                <li id="imprimir" type="button" >Imprimir en PDF</li>
+                <li id="Edicion" onclick="activarEdicion()" >Editar</li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<section>
+			<h1>Mi Hoja de Vida</h1>
+			<form id="formulario" style="display:none">
+				<label for="nombreCompleto">Nombre completo:</label>
+				<input type="text" id="nombreCompleto" name="nombreCompleto"><br>
+
+				<label for="numero">Número:</label>
+				<input type="tel" id="numero" name="numero"><br>
+
+				<label for="correo">Correo electrónico:</label>
+				<input type="email" id="correo" name="correo"><br>
+
+				<label for="experiencia">Experiencia laboral:</label>
+				<textarea id="experiencia" name="experiencia"></textarea><br>
+
+				<label for="descripcion">Descripción personal:</label>
+				<textarea id="descripcion" name="descripcion"></textarea><br>
+
+				<input type="submit" value="Guardar">
+                <button id="cancelar" type="button">Cancelar</button>
+                <button id="actualizar" type="button">Actualizar</button>
+			</form>
+			<div id="hojaVida">
+				<h2 id="nombreCompletoTitulo"></h2>
+				<p id="numeroParrafo"></p>
+				<p id="correoParrafo"></p>
+				<h3>Experiencia laboral</h3>
+				<ul id="experienciaLista"><li></li>
+                    </ul>
+				<h3>Descripción personal</h3>
+				<p id="descripcionParrafo"></p>
+			</div>
+		</section>
+	</main>
+	<script src="script.js"></script>
+</body>
+</html>

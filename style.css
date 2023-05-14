@@ -1,0 +1,128 @@
+/* Estilos para la barra de navegación */
+header {
+    background-color: #0e396b;
+    color: #fff;
+    padding: 10px;
+  }
+
+
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  nav li {
+    float: left;
+  }
+  
+  nav li a , #imprimir, #Edicion{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  nav li a:hover, #imprimir:hover, #Edicion:hover {
+    background-color: #111;
+  }
+  
+  /* Estilos para la sección principal */
+  main {
+    display: flex;
+  }
+  
+  section {
+    flex: 3;
+    padding: 20px;
+  }
+  
+  #hojaVida {
+    max-width: 8.5in;
+    margin: auto;
+    border: 1px solid black;
+  }
+  
+  /* Estilos para el formulario */
+  #formulario {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    display: none;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  input[type="submit"] {
+    background-color: #3088b1;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #0e396b;
+  }
+  button[id="cancelar"] {
+    background-color: #3088b1;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button[id="cancelar"]:hover {
+    background-color: #0e396b;
+  }
+  button[id="actualizar"] {
+    background-color: #3088b1;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button[id="actualizar"]:hover {
+    background-color: #0e396b;
+  }
+  /* Estilos para los botones de acción */
+  #botones-accion {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  #botones-accion button {
+    margin: 0 10px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  #botones-accion button:hover {
+    background-color: #45a049;
+  }
+  
