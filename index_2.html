@@ -1,0 +1,62 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina_principal</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+	<header>
+		<nav>
+			<ul>
+				<li style="float:right"><a href="#">Desloggearse</a></li>
+                <li id="imprimir" type="button" >Imprimir en PDF</li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<div class="container">
+			<section class="form-section">
+				<form id="formulario" class="formulario">
+					<label for="nombreCompleto">Nombre completo:</label>
+					<input type="text" id="nombreCompleto" name="nombreCompleto"><br>
+
+					<label for="cargo">Cargo:</label>
+					<input type="text" id="cargo" name="cargo"><br>
+
+					<label for="descripcion">Descripción personal:</label>
+					<textarea id="descripcion" name="descripcion"></textarea><br>
+
+					<label for="numero">Número:</label>
+					<input type="tel" id="numero" name="numero"><br>
+
+					<label for="web">Página Web:</label>
+					<input type="url" id="web" name="web"><br>
+
+					<label for="experiencia">Experiencia laboral:</label>
+					<textarea id="experiencia" name="experiencia"></textarea><br>
+
+
+					<input type="submit" value="Actualizar" class="actualizar">
+					<input type="reset" value="Cancelar" class="cancelar">
+				</form>
+			</section>
+			<section id="hojaVida" class="hoja-vida">
+				<div class="container-hoja-vida">
+					<h2 id="nombreCompletoCV"></h2>
+					<h3 id="cargoCV"></h3>
+					<p id="numeroCV"></p>
+					<p id="correoCV">example@mail.com</p>
+					<h3>Experiencia laboral</h3>
+					<ul id="experienciaCV"><li></li>
+						</ul>
+					<h3>Descripción personal</h3>
+					<p id="descripcionCV"></p>
+				</div>
+			</section>
+		</div>
+	</main>
+	<script src="./scripts/script.js"></script>
+	<script src="./scripts/eventsInputs.js"></script>
+</body>
+</html>
